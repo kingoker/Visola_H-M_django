@@ -71,6 +71,7 @@
     border: 1px solid #FF6D6D;
     padding: 20px;
     border-radius: 30px 0px 0px 30px;
+    min-width: 630px;
 }
 .main__components::-webkit-scrollbar {
     width: 8px;
@@ -130,7 +131,7 @@
 
 
 .main__model{
-    max-width: 766px;
+    max-width: 630px;
     display: flex;
     flex-direction: column;
     align-items: center;
