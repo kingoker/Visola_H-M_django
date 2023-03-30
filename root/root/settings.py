@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'django_ckeditor_5',
 
     # Мои приложения
-    'visola_blazer'
+    'visola_blazer.apps.VisolaBlazerConfig'
 ]
 
 MIDDLEWARE = [
