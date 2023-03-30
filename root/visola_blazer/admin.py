@@ -12,6 +12,6 @@ class Media:
 admin.site.Media = Media
 
 admin.site.register(Base)
-admin.site.register(Сollar)
+admin.site.register(Collar)
 admin.site.register(Sleeve)
 admin.site.register(Pocket)
