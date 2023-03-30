@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--w*k)$f2_gt=_b@unsymv$jwdy^slb@)nd_inv*5#fl=5@2w+_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '*',
@@ -131,7 +131,7 @@ USE_TZ = True
 # Статичные файлы
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "visola_blazer/static",
+    BASE_DIR/"visola_blazer/static",
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
