@@ -129,7 +129,7 @@ USE_TZ = True
 
 
 # Статичные файлы
-STATIC_URL = '/static/'
+STATIC_URL = '/root/static/'
 STATICFILES_DIRS = [
     BASE_DIR/"visola_blazer/static",
 ]
