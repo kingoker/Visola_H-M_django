@@ -150,6 +150,10 @@ mimetypes.add_type("image/svg+xml", ".svg")
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+# Кодировка utf-8
+DEFAULT_CHARSET = 'utf-8'
+
+
 
 # Настройки CKEditor
 customColorPalette = [

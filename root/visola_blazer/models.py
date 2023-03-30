@@ -27,7 +27,7 @@ class Base(models.Model):
 def upload_collar(instance, filename):
     return 'photos/collar{}/{}'.format(instance.date, filename)
 
-class Сollar(models.Model):
+class Collar(models.Model):
     date = models.DateField(default=date.today, editable=False)
     photo = models.ImageField(upload_to=upload_collar)
     description = models.TextField()
