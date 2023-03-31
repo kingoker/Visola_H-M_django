@@ -282,6 +282,13 @@
     width: 56.5%;
     z-index: 1;
 }
+.model__toppocket {
+    position: absolute;
+    top: 153px;
+    left: 251px;
+    width: 11.5%;
+    z-index: 1;
+}
 .model__warp {
     position: absolute;
     top: 24px;
