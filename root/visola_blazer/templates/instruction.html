@@ -52,6 +52,9 @@
                 <br>
                 <hr>
                 <br>
+                {% for toppocket in toppockets %}
+                    <p class="instruction__text">{{ toppocket.instruction|safe }}</p>
+                {% endfor %}
             </div>
         </div>
     </section>

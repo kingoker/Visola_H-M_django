@@ -27,17 +27,19 @@ def index(request):
 
 
 # Вывод инструкции по собранному пиджаку
-def instruction(request, base, collar, sleeve, pocket):
+def instruction(request, base, collar, sleeve, pocket, toppocket):
     bases = Base.objects.filter(pk=base)
     collars = Collar.objects.filter(pk=collar)
     sleeves = Sleeve.objects.filter(pk=sleeve)
     pockets = Pocket.objects.filter(pk=pocket)
+    toppockets = topPocket.objects.filter(pk=toppocket)
     
     context = {
         'bases': bases,
         'collars': collars,
         'sleeves': sleeves,
         'pockets': pockets,
+        'toppockets': toppockets,
     }
     
     return render(request, 'instruction.html', context)

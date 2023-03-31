@@ -200,14 +200,18 @@
     top: 50px;
 }
 .model__second{
-    top: 180px;
+    top: 170px;
 }
 .model__therd{
     top: 280px;
 }
 .model__fourth{
-    top: 380px;
+    top: 340px;
 }
+.model__fifth{
+    top: 355px;
+}
+
 .model__first::before{
     content: '';
     position: absolute;
@@ -223,7 +227,7 @@
     right: 0;
     z-index: -1;
     height: 2px;
-    width: 170px;
+    width: 280px;
     background-color: #FF6D6D;
 }
 .model__therd::before{
@@ -241,9 +245,19 @@
     right: 0;
     z-index: -1;
     height: 2px;
+    width: 140px;
+    background-color: #FF6D6D;
+}
+.model__fifth::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    height: 2px;
     width: 260px;
     background-color: #FF6D6D;
 }
+
 
 
 
