@@ -15,11 +15,13 @@ def index(request):
     collars = Collar.objects.filter(published=True)
     sleeves = Sleeve.objects.filter(published=True)
     pockets = Pocket.objects.filter(published=True)
+    toppockets = topPocket.objects.filter(published=True)
     context = {
         'bases': bases,
         'collars': collars,
         'sleeves': sleeves,
         'pockets': pockets,
+        'toppockets': toppockets,
     }
     return render(request, 'index.html', context)
 

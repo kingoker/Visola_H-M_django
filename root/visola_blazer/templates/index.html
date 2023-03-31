@@ -79,6 +79,19 @@
                             {% endfor %}
                         </div>
                     </div>
+                    <div class="components__frame">
+                        <h2 class="components__title">Верхник Карманы</h2>
+                        <div class="components__list toppocketOfJacet__list">
+                            {% for toppocket in toppockets %}
+                            <div class="components__item">
+                                <img src="{{ toppocket.photo.url }}" alt="{{ toppocket.description }}">
+                                <p class="component__pk">{{ toppocket.pk }}</p>
+                            </div>
+                            <p class="component__descriptionHide">{{ toppocket.description }}</p>
+                            
+                            {% endfor %}
+                        </div>
+                    </div>
                 </div>
                 <!-- Цвета -->
                 <div class="main__colors colors">
@@ -97,6 +110,7 @@
                     <img src="" class="model__collar model__element" id="headerOfJacet">
                     <img src="" class="model__sleeve model__element" id="handsOfJacet">
                     <img src="" class="model__pocket model__element" id="pocketOfJacet">
+                    <img src="" class="model__pocket model__element" id="toppocketOfJacet">
                     <img src="" class="model__warp model__element" id="mainBaseOfJacet">
 
 
@@ -104,6 +118,7 @@
                     <div class="model__second number" onclick="activateComponent(3)">2</div>
                     <div class="model__therd number" onclick="activateComponent(1)">3</div>
                     <div class="model__fourth number" onclick="activateComponent(4)">4</div>
+                    <div class="model__fifth number" onclick="activateComponent(4)">5</div>
                 </div>
                 <div class="model__information">
                     <div class="model__information__number">
@@ -114,7 +129,7 @@
                         Пиджак - это элемент мужского или женского костюма, который надевается поверх рубашки и брюк. Обычно пиджак имеет лацканы и одну или несколько пуговиц, которые позволяют застегнуть его на передней части. 
                     </p>
                 </div>
-                <a class="button instruction__button" href="{% url 'instruction' base='1' collar='1' sleeve='1' pocket='1' %}">
+                <a class="button instruction__button" href="{% url 'instruction' base='1' collar='1' sleeve='1' pocket='1' toppocket='1' %}">
                     Посмотреть инструкцию шитья пиджака
                 </a>
             </div>

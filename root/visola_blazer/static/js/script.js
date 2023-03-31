@@ -185,8 +185,9 @@ const observer = new MutationObserver(function(mutations) {
             const activeHeader = document.querySelector('.headerOfJacet__list .components__item-active .component__pk').textContent;
             const activeHands = document.querySelector('.handsOfJacet__list .components__item-active .component__pk').textContent;
             const activePocket = document.querySelector('.pocketOfJacet__list .components__item-active .component__pk').textContent;
+            const activetopPocket = document.querySelector('.toppocketOfJacet__list .components__item-active .component__pk').textContent;
 
-            const url = `/instruction/${activeBase}/${activeHeader}/${activeHands}/${activePocket}/`;
+            const url = `/instruction/${activeBase}/${activeHeader}/${activeHands}/${activePocket}/${activetopPocket}`;
             instructionButton3.setAttribute('href', url);
         }
     }
