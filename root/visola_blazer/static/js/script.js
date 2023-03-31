@@ -74,6 +74,26 @@ for (var i = 0; i < pocketOfJacet.length; i++) {
 
 
 
+// Замена верхнего кармана
+// Получаем ссылки на все маленькие изображения
+var toppocketOfJacet = document.querySelectorAll(".toppocketOfJacet__list .components__item img");
+
+// Обходим все маленькие изображения и назначаем обработчик событий для щелчка
+for (var i = 0; i < toppocketOfJacet.length; i++) {
+    toppocketOfJacet[i].addEventListener("click", function() {
+    // Получаем путь к маленькому изображению
+    var toppocketOfJacetsmallImagePath = this.src;
+
+    // Обновляем большое изображение
+    var headerOfJacetImage = document.getElementById("toppocketOfJacet");
+    headerOfJacetImage.src = toppocketOfJacetsmallImagePath;
+  });
+}
+
+
+
+
+
 
 // Добавление и удаление классов
 // получаем все элементы с классом "components__item"
