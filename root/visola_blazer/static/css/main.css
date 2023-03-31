@@ -187,6 +187,7 @@
 .model__image{
     position: relative;
     width: 500px;
+    max-width: 100%;
 }
 .model__template{
     height: 470px;
@@ -370,6 +371,10 @@
         width: 220px;
     }
     .main__model {
+        max-width: 100%;
+    }
+    .main__components {
+        min-width: 0px;
         max-width: 100%;
     }
 }
