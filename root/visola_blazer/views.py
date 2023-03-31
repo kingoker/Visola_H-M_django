@@ -12,7 +12,7 @@ def instruction_view(request, base, collar, sleeve, pocket):
 # Главная страница
 def index(request):
     bases = Base.objects.filter(published=True)
-    collars = Сollar.objects.filter(published=True)
+    collars = Collar.objects.filter(published=True)
     sleeves = Sleeve.objects.filter(published=True)
     pockets = Pocket.objects.filter(published=True)
     context = {
@@ -27,7 +27,7 @@ def index(request):
 # Вывод инструкции по собранному пиджаку
 def instruction(request, base, collar, sleeve, pocket):
     bases = Base.objects.filter(pk=base)
-    collars = Сollar.objects.filter(pk=collar)
+    collars = Collar.objects.filter(pk=collar)
     sleeves = Sleeve.objects.filter(pk=sleeve)
     pockets = Pocket.objects.filter(pk=pocket)
     
