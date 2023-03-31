@@ -78,3 +78,22 @@ class Pocket(models.Model):
     class Meta:
         verbose_name = 'Карман'
         verbose_name_plural = 'Карманы'
+
+
+# Верхний Карманы
+def upload_toppocket(instance, filename):
+    return 'photos/pocket{}/{}'.format(instance.date, filename)
+
+class topPocket(models.Model):
+    date = models.DateField(default=date.today, editable=False)
+    photo = models.ImageField(upload_to=upload_toppocket)
+    description = models.TextField()
+    published = models.BooleanField(default=False)
+    instruction = CKEditor5Field('Инструкция', config_name='extends')
+
+    def __str__(self):
+        return self.description
+    
+    class Meta:
+        verbose_name = 'Верхний Карман'
+        verbose_name_plural = 'Верхние Карманы'
