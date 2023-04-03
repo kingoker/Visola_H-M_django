@@ -47,6 +47,11 @@
     z-index: 99;
     box-shadow: 4px 4px 5px rgba(83, 0, 0, 0.3);
 }
+.header__container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 .header__title{
     color: #fff;
     text-decoration: none;
@@ -352,6 +357,31 @@
 }
 .red{
     filter: saturate(220%) brightness(80%) hue-rotate(1210deg);
+}
+
+
+/* Переводчик */
+.skiptranslate {
+    display: none !important;
+}
+.language {
+    display: flex;
+    align-items: center;
+    transform: translateY(-50%);
+    display: flex;
+    margin-top: 20px;
+}
+
+.language__img {
+    height: 15px;
+    margin: 2px;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.language__img:hover,
+.language__img_active {
+    opacity: 1;
 }
 
 @media (max-width: 1000px){
