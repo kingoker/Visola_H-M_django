@@ -1,8 +1,3 @@
-// Работа с гугл 
-document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-location.reload();
-
-
 // loader на сайте
 window.addEventListener('load', function() {
   const preloader = document.querySelector('.preloader');
