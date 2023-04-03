@@ -1,15 +1,3 @@
-// Запретить кэширование страницы
-header('Cache-Control: no-cache, no-store, must-revalidate');
-header('Pragma: no-cache');
-header('Expires: 0');
-
-// Запретить сохранение данных в кэше браузера
-header('Cache-Control: no-store');
-
-
-
-
-
 // loader на сайте
 window.addEventListener('load', function() {
   const preloader = document.querySelector('.preloader');
