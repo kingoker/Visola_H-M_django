@@ -33,26 +33,17 @@ function TranslateGetCode() {
     return lang.substr(-2);
 }
 
-// function TranslateClearCookie() {
-//     $.cookie('googtrans', null);
-//     $.cookie("googtrans", null, {
+function TranslateClearCookie() {
+    $.cookie('googtrans', null);
+    $.cookie("googtrans", null, {
+        domain: "." + document.domain,
+    });
+}
+
+// function TranslateSetCookie(code) {
+//     // Записываем куки /язык_который_переводим/язык_на_который_переводим
+//     $.cookie('googtrans', "/auto/" + code);
+//     $.cookie("googtrans", "/auto/" + code, {
 //         domain: "." + document.domain,
 //     });
 // }
-
-function TranslateSetCookie(code) {
-    // Записываем куки /язык_который_переводим/язык_на_который_переводим
-    const cookieValue = googleTranslateConfig.lang + "/" + code;
-    $.cookie('googtrans', cookieValue);
-    $.cookie("googtrans", cookieValue, {
-        domain: "." + document.domain,
-    });
-}
-
-function TranslateSetCookie(code) {
-    // Записываем куки /язык_который_переводим/язык_на_который_переводим
-    $.cookie('googtrans', "/auto/" + code);
-    $.cookie("googtrans", "/auto/" + code, {
-        domain: "." + document.domain,
-    });
-}
