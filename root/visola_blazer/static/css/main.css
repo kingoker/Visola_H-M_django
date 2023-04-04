@@ -325,6 +325,10 @@
 .instruction__text{
     width: 100%;
 }
+.instruction__h2{
+    text-align: center;
+    color: #FF6D6D;
+}
 
 
 /* Цвета */
