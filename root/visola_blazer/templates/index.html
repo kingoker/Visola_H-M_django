@@ -29,17 +29,6 @@
                 <img src="{% static 'img/en.jpg' %}" alt="en" data-google-lang="en" class="language__img">
                 <img src="{% static 'img/uz.jpg' %}" alt="uz" data-google-lang="uz" class="language__img">
             </div>
-            
-            <!-- ConveyThis code -->
-            <script src="//cdn.conveythis.com/javascript/conveythis-initializer.js"></script>
-            <script type="text/javascript">
-                document.addEventListener("DOMContentLoaded", function(e) {
-                    ConveyThis_Initializer.init({
-                        api_key: "pub_1be1cc339f678d6424d1280a01cff74d"
-                    });
-                });
-            </script>
-            <!-- End ConveyThis code -->
         </div>
     </header>
 
@@ -164,7 +153,7 @@
 
     <!-- Гугл переводчик -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
     <script src="{% static 'js/google-translate.js' %}"></script>
 </body>
