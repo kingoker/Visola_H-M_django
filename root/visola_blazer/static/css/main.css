@@ -87,6 +87,9 @@
     background-color: #FF6D6D;
     border-radius: 8px;
 }
+.main__components_wrapper{
+    max-width: 100%;
+}
 
 .components__frame{
     max-width: 666px;
