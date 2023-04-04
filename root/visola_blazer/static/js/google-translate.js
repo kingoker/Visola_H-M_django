@@ -1,24 +1,49 @@
-// Определяем текущий язык страницы
-const currentLang = navigator.language || navigator.userLanguage;
-
-// Находим все флаги
-const flags = document.querySelectorAll('.language-selector img');
-
-// Обрабатываем клик по флагу
-flags.forEach((flag) => {
-  flag.addEventListener('click', () => {
-    // Получаем выбранный язык
-    const selectedLang = flag.dataset.lang;
-
-    // Если выбранный язык не совпадает с текущим языком страницы, то переводим страницу
-    if (selectedLang !== currentLang) {
-      // Устанавливаем новый язык страницы
-      document.documentElement.lang = selectedLang;
-
-      // Запускаем автоматический перевод страницы
-      const script = document.createElement('script');
-      script.src = `//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit`;
-      document.body.appendChild(script);
+    const googleTranslateConfig = {
+        lang: "ru",
+    };
+    
+    function TranslateInit() {
+    
+        let code = TranslateGetCode();
+        // Находим флаг с выбранным языком для перевода и добавляем к нему активный класс
+        $('[data-google-lang="' + code + '"]').addClass('language__img_active');
+    
+        if (code == googleTranslateConfig.lang) {
+            // Если язык по умолчанию, совпадает с языком на который переводим
+            // То очищаем куки
+            TranslateClearCookie();
+        }
+    
+        // Инициализируем виджет с языком по умолчанию
+        new google.translate.TranslateElement({
+            pageLanguage: googleTranslateConfig.lang,
+        });
+    
+        // Вешаем событие  клик на флаги
+        $('[data-google-lang]').click(function () {
+            TranslateSetCookie($(this).attr("data-google-lang"))
+            // Перезагружаем страницу
+            window.location.reload();
+        });
     }
-  });
-});
+    
+    function TranslateGetCode() {
+        // Если куки нет, то передаем дефолтный язык
+        let lang = ($.cookie('googtrans') != undefined && $.cookie('googtrans') != "null") ? $.cookie('googtrans') : googleTranslateConfig.lang;
+        return lang.substr(-2);
+    }
+    
+    function TranslateClearCookie() {
+        $.cookie('googtrans', null);
+        $.cookie("googtrans", null, {
+            domain: "." + document.domain,
+        });
+    }
+    
+    function TranslateSetCookie(code) {
+        // Записываем куки /язык_который_переводим/язык_на_который_переводим
+        $.cookie('googtrans', "/auto/" + code);
+        $.cookie("googtrans", "/auto/" + code, {
+            domain: "." + document.domain,
+        });
+    }
