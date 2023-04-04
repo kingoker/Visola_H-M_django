@@ -93,8 +93,6 @@ for (var i = 0; i < toppocketOfJacet.length; i++) {
 
 
 
-
-
 // Добавление и удаление классов
 // получаем все элементы с классом "components__item"
 const items = document.querySelectorAll(".components__item");
