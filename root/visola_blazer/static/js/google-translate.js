@@ -1,4 +1,4 @@
-$('.language__img').click(function () {
+// $('.language__img').click(function () {
     const googleTranslateConfig = {
         lang: "ru",
     };
@@ -48,4 +48,4 @@ $('.language__img').click(function () {
             domain: "." + document.domain,
         });
     }
-});
+// });
