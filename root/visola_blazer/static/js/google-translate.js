@@ -1,3 +1,15 @@
+window.addEventListener('load', () => {
+    localStorage.clear(); // Очистка локального хранилища
+    sessionStorage.clear(); // Очистка сессионного хранилища
+    document.cookie.split(";").forEach((c) => {
+      document.cookie = c
+        .replace(/^ +/, "")
+        .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+    }); // Очистка всех cookie
+});
+  
+
+
 const googleTranslateConfig = {
     lang: "ru",
 };
