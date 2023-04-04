@@ -280,13 +280,13 @@
 .model__sleeve {
     position: absolute;
     top: 47px;
-    left: 7px;
-    width: 97%;
+    left: 6px;
+    width: 98.6%;
     z-index: 2;
 }
 .model__pocket {
     position: absolute;
-    bottom: 29px;
+    top: 68.5%;
     left: 67px;
     width: 56.5%;
     z-index: 1;
