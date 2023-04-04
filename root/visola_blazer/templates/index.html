@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    
-    <!-- Гугл переводчик -->
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Переводчик -->
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
 
     <title>VISOLA H&M</title>
 </head>
@@ -24,10 +24,10 @@
             <a class="header__title" href="/">
                 <h1>Конструктор пиджаков by VISOLA</h1>
             </a>
-            <div class="language" id="google_translate_element">
-                <img src="{% static 'img/ru.jpg' %}" alt="ru" data-google-lang="ru" class="language__img" onclick="translatePage('ru')">
-                <img src="{% static 'img/en.jpg' %}" alt="en" data-google-lang="en" class="language__img" onclick="translatePage('en')">
-                <img src="{% static 'img/uz.jpg' %}" alt="uz" data-google-lang="uz" class="language__img" onclick="translatePage('uz')">
+            <div class="language">
+                <img src="{% static 'img/ru.jpg' %}" alt="ru" data-google-lang="ru" class="language__img">
+                <img src="{% static 'img/en.jpg' %}" alt="en" data-google-lang="en" class="language__img">
+                <img src="{% static 'img/uz.jpg' %}" alt="uz" data-google-lang="uz" class="language__img">
             </div>
         </div>
     </header>
@@ -153,6 +153,7 @@
 
     <!-- Гугл переводчик -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script src="{% static 'js/google-translate.js' %}"></script>
 </body>
 </html>
