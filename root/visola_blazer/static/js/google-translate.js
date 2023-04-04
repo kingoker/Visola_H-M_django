@@ -7,6 +7,15 @@ window.addEventListener('load', () => {
         .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
     }); // Очистка всех cookie
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.documentElement.lang = "ru";
+});
+
+
   
 
 
