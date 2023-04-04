@@ -1,3 +1,11 @@
+document.addEventListener('DOMContentLoaded', function() {
+    const activeImgs = document.querySelectorAll('.language__img_active');
+    activeImgs.forEach(function(img) {
+      img.classList.remove('language__img_active');
+    });
+});
+  
+
 const googleTranslateConfig = {
     lang: "ru",
 };
