@@ -28,35 +28,35 @@
         <div class="main__container container">
             <div class="main__components_wrapper">
                 <!-- Компоненты -->
-                <h2 class="instruction__h2">Инструкция основы</h2>
+                <h2 class="instruction__h2">Конструкция основы</h2>
                 {% for base in bases %}
                     <p class="instruction__text">{{ base.instruction|safe }}</p>
                 {% endfor %}
                 <br>
                 <hr>
                 <br>
-                <h2 class="instruction__h2">Инструкция воротника</h2>
+                <h2 class="instruction__h2">Конструкция воротника</h2>
                 {% for collar in collars %}
                     <p class="instruction__text">{{ collar.instruction|safe }}</p>
                 {% endfor %}
                 <br>
                 <hr>
                 <br>
-                <h2 class="instruction__h2">Инструкция рукавов</h2>
+                <h2 class="instruction__h2">Конструкция рукавов</h2>
                 {% for sleeve in sleeves %}
                     <p class="instruction__text">{{ sleeve.instruction|safe }}</p>
                 {% endfor %}
                 <br>
                 <hr>
                 <br>
-                <h2 class="instruction__h2">Инструкция карманов</h2>
+                <h2 class="instruction__h2">Конструкция карманов</h2>
                 {% for pocket in pockets %}
                     <p class="instruction__text">{{ pocket.instruction|safe }}</p>
                 {% endfor %}
                 <br>
                 <hr>
                 <br>
-                <h2 class="instruction__h2">Инструкция верхнего кармана</h2>
+                <h2 class="instruction__h2">Конструкция верхнего кармана</h2>
                 {% for toppocket in toppockets %}
                     <p class="instruction__text">{{ toppocket.instruction|safe }}</p>
                 {% endfor %}
